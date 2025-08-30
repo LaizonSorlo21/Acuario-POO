@@ -1,7 +1,7 @@
 package acuario
 
 fun construirAcuario() {
-    // Paso 3 y 4: crear instancia y llamar imprimirTamano(), modificar alto y volver a imprimir
+    //crear instancia y llamar imprimirTamano(), modificar alto y volver a imprimir
     val miAcuario = Acuario()
     miAcuario.imprimirTamano()
     miAcuario.alto = 60
@@ -38,6 +38,16 @@ fun construirAcuario() {
     miTorre.imprimirTamano()
 }
 
+fun crearPeces() {
+    val tiburon = Tiburon()
+    val payaso = PezPayaso()
+    println("Tiburón: ${tiburon.color}")
+    tiburon.comer()
+    println("Pez payaso: ${payaso.color}")
+    payaso.comer()
+}
+
 fun main() {
     construirAcuario()
+    crearPeces()
 }
